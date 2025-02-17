@@ -16,6 +16,10 @@ class BlogSeeder extends Seeder
         DB::table('blogs')->truncate();
 
         DB::table('blogs')->insert([
+            'title' => "Blog 1",
+            'description' => "Ini adalah description untuk blog 1 ",
+        ]);
+        DB::table('blogs')->insert([
             'title' => "Blog 2",
             'description' => "Ini adalah description untuk blog 2 ",
         ]);
