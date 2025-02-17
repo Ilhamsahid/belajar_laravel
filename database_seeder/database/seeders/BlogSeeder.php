@@ -2,8 +2,9 @@
 
 namespace Database\Seeders;
 
-use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
+use Illuminate\Support\Facades\DB;
+use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 
 class BlogSeeder extends Seeder
 {
@@ -12,6 +13,9 @@ class BlogSeeder extends Seeder
      */
     public function run(): void
     {
-        //
+        DB::table('blogs')->insert([
+            'title' => "Blog 2",
+            'description' => "Ini adalah description untuk blog 2 ",
+        ]);
     }
 }
