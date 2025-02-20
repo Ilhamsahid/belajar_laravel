@@ -2,6 +2,7 @@
 
 namespace Database\Seeders;
 
+use App\Models\Blog;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
@@ -15,21 +16,25 @@ class BlogSeeder extends Seeder
     {
         DB::table('blogs')->truncate();
 
-        DB::table('blogs')->insert([
-            'title' => "Blog 1",
-            'description' => "Ini adalah description untuk blog 1 ",
-        ]);
-        DB::table('blogs')->insert([
-            'title' => "Blog 2",
-            'description' => "Ini adalah description untuk blog 2 ",
-        ]);
-        DB::table('blogs')->insert([
-            'title' => "Blog 3",
-            'description' => "Ini adalah description untuk blog 3 ",
-        ]);
-        DB::table('blogs')->insert([
-            'title' => "Blog 4",
-            'description' => "Ini adalah description untuk blog 4 ",
-        ]);
+        Blog::factory()
+            ->Count(30)
+            ->create();
+
+        // DB::table('blogs')->insert([
+        //     'title' => "Blog 1",
+        //     'description' => "Ini adalah description untuk blog 1 ",
+        // ]);
+        // DB::table('blogs')->insert([
+        //     'title' => "Blog 2",
+        //     'description' => "Ini adalah description untuk blog 2 ",
+        // ]);
+        // DB::table('blogs')->insert([
+        //     'title' => "Blog 3",
+        //     'description' => "Ini adalah description untuk blog 3 ",
+        // ]);
+        // DB::table('blogs')->insert([
+        //     'title' => "Blog 4",
+        //     'description' => "Ini adalah description untuk blog 4 ",
+        // ]);
     }
 }
