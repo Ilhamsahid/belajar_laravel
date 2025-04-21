@@ -8,7 +8,7 @@
         <h1 class="text-center fw-bold">Blog List</h1>
 
         <div class="container mt-4">
-            <Add class="btn add-btn addModal" data-bs-toggle="modal" data-bs-target="#modal" data-action="">Add New</a>
+            <Add class="btn add-btn addModal" data-bs-toggle="modal" data-bs-target="#modal" data-action=""{{ route('blog.store') }}>Add New</a>
         </div>
 
         <div class="container mt-4">
@@ -59,7 +59,6 @@
                     </tbody>
                 </table>
             </div>
-
         </div>
         <div class="d-flex justify-content-center mt-4">
             {{ $data->links('vendor.pagination.bootstrap-5') }}
